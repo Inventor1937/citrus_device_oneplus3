@@ -21,7 +21,7 @@
 # definition file).
 #
 
-$(call inherit-product-if-exists, vendor/oneplus/oneplus3/oneplus3-vendor.mk)
+$(call inherit-product, vendor/oneplus/oneplus3/oneplus3-vendor.mk)
 # Inherite 8996 qcom
 include device/qcom/msm8996/msm8996.mk
 
@@ -132,13 +132,13 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library \
-    libantradio
+# PRODUCT_PACKAGES += \
+#    AntHalService \
+#    com.dsi.ant.antradio_library \
+#    libantradio
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
+# PRODUCT_COPY_FILES += \
+#    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Camera
 PRODUCT_PACKAGES += \
